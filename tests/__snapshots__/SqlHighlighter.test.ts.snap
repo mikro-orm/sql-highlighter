@@ -1,0 +1,501 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SqlHighlighter highlights SQL: ALTER TABLE \`PREFIX_contact\` ADD \`customer_service\` tinyint(1) NOT NULL DEFAULT 0 AFTER \`email\` 1`] = `"[37m[1mALTER TABLE[22m[39m [33m\`PREFIX_contact\`[39m [37m[1mADD[22m[39m [33m\`customer_service\`[39m [36mtinyint[39m([32m1[39m) [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mDEFAULT[22m[39m [32m0[39m [37m[1mAFTER[22m[39m [33m\`email\`[39m"`;
+
+exports[`SqlHighlighter highlights SQL: ALTER TABLE \`PREFIX_customer\` ADD \`note\` text AFTER \`secure_key\` 1`] = `"[37m[1mALTER TABLE[22m[39m [33m\`PREFIX_customer\`[39m [37m[1mADD[22m[39m [33m\`note\`[39m [36mtext[39m [37m[1mAFTER[22m[39m [33m\`secure_key\`[39m"`;
+
+exports[`SqlHighlighter highlights SQL: ALTER TABLE \`PREFIX_employee\` ADD \`bo_color\` varchar(32) default NULL AFTER \`stats_date_to\` 1`] = `"[37m[1mALTER TABLE[22m[39m [33m\`PREFIX_employee\`[39m [37m[1mADD[22m[39m [33m\`bo_color\`[39m [36mvarchar[39m([32m32[39m) [37m[1mdefault[22m[39m [36mNULL[39m [37m[1mAFTER[22m[39m [33m\`stats_date_to\`[39m"`;
+
+exports[`SqlHighlighter highlights SQL: ALTER TABLE \`PREFIX_product\`
+	DROP \`reduction_price\`,
+	DROP \`reduction_percent\`,
+	DROP \`reduction_from\`,
+	DROP \`reduction_to\` 1`] = `
+"[37m[1mALTER TABLE[22m[39m [33m\`PREFIX_product\`[39m
+	[37m[1mDROP[22m[39m [33m\`reduction_price\`[39m[0m,[0m
+	[37m[1mDROP[22m[39m [33m\`reduction_percent\`[39m[0m,[0m
+	[37m[1mDROP[22m[39m [33m\`reduction_from\`[39m[0m,[0m
+	[37m[1mDROP[22m[39m [33m\`reduction_to\`[39m"
+`;
+
+exports[`SqlHighlighter highlights SQL: ALTER TABLE \`test_change\` CHANGE \`id\` \`_id\` BIGINT(20) UNSIGNED NULL; 1`] = `"[37m[1mALTER TABLE[22m[39m [33m\`test_change\`[39m [37m[1mCHANGE[22m[39m [33m\`id\`[39m [33m\`_id\`[39m [36mBIGINT[39m([32m20[39m) [37m[1mUNSIGNED[22m[39m [36mNULL[39m[0m;[0m"`;
+
+exports[`SqlHighlighter highlights SQL: ALTER TABLE \`test_modify\` MODIFY \`id\` INT(11) UNSIGNED NOT NULL; 1`] = `"[37m[1mALTER TABLE[22m[39m [33m\`test_modify\`[39m [37m[1mMODIFY[22m[39m [33m\`id\`[39m [36mINT[39m([32m11[39m) [37m[1mUNSIGNED[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m[0m;[0m"`;
+
+exports[`SqlHighlighter highlights SQL: CREATE TABLE \`PREFIX_address\` (
+  \`id_address\` int(10) unsigned NOT NULL auto_increment,
+  \`id_country\` int(10) unsigned NOT NULL,
+  \`id_state\` int(10) unsigned default NULL,
+  \`id_customer\` int(10) unsigned NOT NULL default '0',
+  \`id_manufacturer\` int(10) unsigned NOT NULL default '0',
+  \`id_supplier\` int(10) unsigned NOT NULL default '0',
+  \`id_warehouse\` int(10) unsigned NOT NULL default '0',
+  \`alias\` varchar(32) NOT NULL,
+  \`company\` varchar(64) default NULL,
+  \`lastname\` varchar(32) NOT NULL,
+  \`firstname\` varchar(32) NOT NULL,
+  \`address1\` varchar(128) NOT NULL,
+  \`address2\` varchar(128) default NULL,
+  \`postcode\` varchar(12) default NULL,
+  \`city\` varchar(64) NOT NULL,
+  \`other\` text,
+  \`phone\` varchar(16) default NULL,
+  \`phone_mobile\` varchar(16) default NULL,
+  \`vat_number\` varchar(32) default NULL,
+  \`dni\` varchar(16) DEFAULT NULL,
+  \`date_add\` datetime NOT NULL,
+  \`date_upd\` datetime NOT NULL,
+  \`active\` tinyint(1) unsigned NOT NULL default '1',
+  \`deleted\` tinyint(1) unsigned NOT NULL default '0',
+  PRIMARY KEY (\`id_address\`),
+  KEY \`address_customer\` (\`id_customer\`),
+  KEY \`id_country\` (\`id_country\`),
+  KEY \`id_state\` (\`id_state\`),
+  KEY \`id_manufacturer\` (\`id_manufacturer\`),
+  KEY \`id_supplier\` (\`id_supplier\`),
+  KEY \`id_warehouse\` (\`id_warehouse\`)
+) ENGINE=ENGINE_TYPE DEFAULT CHARSET=utf8 1`] = `
+"[37m[1mCREATE[22m[39m [37m[1mTABLE[22m[39m [33m\`PREFIX_address\`[39m (
+  [33m\`id_address\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mauto_increment[22m[39m[0m,[0m
+  [33m\`id_country\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`id_state\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mdefault[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`id_customer\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mdefault[22m[39m [33m'0'[39m[0m,[0m
+  [33m\`id_manufacturer\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mdefault[22m[39m [33m'0'[39m[0m,[0m
+  [33m\`id_supplier\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mdefault[22m[39m [33m'0'[39m[0m,[0m
+  [33m\`id_warehouse\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mdefault[22m[39m [33m'0'[39m[0m,[0m
+  [33m\`alias\`[39m [36mvarchar[39m([32m32[39m) [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`company\`[39m [36mvarchar[39m([32m64[39m) [37m[1mdefault[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`lastname\`[39m [36mvarchar[39m([32m32[39m) [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`firstname\`[39m [36mvarchar[39m([32m32[39m) [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`address1\`[39m [36mvarchar[39m([32m128[39m) [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`address2\`[39m [36mvarchar[39m([32m128[39m) [37m[1mdefault[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`postcode\`[39m [36mvarchar[39m([32m12[39m) [37m[1mdefault[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`city\`[39m [36mvarchar[39m([32m64[39m) [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`other\`[39m [36mtext[39m[0m,[0m
+  [33m\`phone\`[39m [36mvarchar[39m([32m16[39m) [37m[1mdefault[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`phone_mobile\`[39m [36mvarchar[39m([32m16[39m) [37m[1mdefault[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`vat_number\`[39m [36mvarchar[39m([32m32[39m) [37m[1mdefault[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`dni\`[39m [36mvarchar[39m([32m16[39m) [37m[1mDEFAULT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`date_add\`[39m datetime [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`date_upd\`[39m datetime [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`active\`[39m [36mtinyint[39m([32m1[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mdefault[22m[39m [33m'1'[39m[0m,[0m
+  [33m\`deleted\`[39m [36mtinyint[39m([32m1[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mdefault[22m[39m [33m'0'[39m[0m,[0m
+  [37m[1mPRIMARY[22m[39m [37m[1mKEY[22m[39m ([33m\`id_address\`[39m)[0m,[0m
+  [37m[1mKEY[22m[39m [33m\`address_customer\`[39m ([33m\`id_customer\`[39m)[0m,[0m
+  [37m[1mKEY[22m[39m [33m\`id_country\`[39m ([33m\`id_country\`[39m)[0m,[0m
+  [37m[1mKEY[22m[39m [33m\`id_state\`[39m ([33m\`id_state\`[39m)[0m,[0m
+  [37m[1mKEY[22m[39m [33m\`id_manufacturer\`[39m ([33m\`id_manufacturer\`[39m)[0m,[0m
+  [37m[1mKEY[22m[39m [33m\`id_supplier\`[39m ([33m\`id_supplier\`[39m)[0m,[0m
+  [37m[1mKEY[22m[39m [33m\`id_warehouse\`[39m ([33m\`id_warehouse\`[39m)
+) [37m[1mENGINE[22m[39m[0m=[0m[37m[1mENGINE_TYPE[22m[39m [37m[1mDEFAULT[22m[39m [37m[1mCHARSET[22m[39m[0m=[0mutf8"
+`;
+
+exports[`SqlHighlighter highlights SQL: CREATE TABLE \`PREFIX_alias\` (
+  \`id_alias\` int(10) unsigned NOT NULL auto_increment,
+  \`alias\` varchar(255) NOT NULL,
+  \`search\` varchar(255) NOT NULL,
+  \`active\` tinyint(1) NOT NULL default '1',
+  PRIMARY KEY (\`id_alias\`),
+  UNIQUE KEY \`alias\` (\`alias\`)
+) ENGINE=ENGINE_TYPE DEFAULT CHARSET=utf8 1`] = `
+"[37m[1mCREATE[22m[39m [37m[1mTABLE[22m[39m [33m\`PREFIX_alias\`[39m (
+  [33m\`id_alias\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mauto_increment[22m[39m[0m,[0m
+  [33m\`alias\`[39m [36mvarchar[39m([32m255[39m) [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`search\`[39m [36mvarchar[39m([32m255[39m) [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`active\`[39m [36mtinyint[39m([32m1[39m) [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mdefault[22m[39m [33m'1'[39m[0m,[0m
+  [37m[1mPRIMARY[22m[39m [37m[1mKEY[22m[39m ([33m\`id_alias\`[39m)[0m,[0m
+  [37m[1mUNIQUE[22m[39m [37m[1mKEY[22m[39m [33m\`alias\`[39m ([33m\`alias\`[39m)
+) [37m[1mENGINE[22m[39m[0m=[0m[37m[1mENGINE_TYPE[22m[39m [37m[1mDEFAULT[22m[39m [37m[1mCHARSET[22m[39m[0m=[0mutf8"
+`;
+
+exports[`SqlHighlighter highlights SQL: CREATE TABLE \`PREFIX_carrier\` (
+  \`id_carrier\` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  \`id_reference\` int(10) unsigned NOT NULL,
+  \`id_tax_rules_group\` int(10) unsigned DEFAULT '0',
+  \`name\` varchar(64) NOT NULL,
+  \`url\` varchar(255) DEFAULT NULL,
+  \`active\` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  \`deleted\` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  \`shipping_handling\` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  \`range_behavior\` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  \`is_module\` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  \`is_free\` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  \`shipping_external\` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  \`need_range\` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  \`external_module_name\` varchar(64) DEFAULT NULL,
+  \`shipping_method\` int(2) NOT NULL DEFAULT '0',
+  \`position\` int(10) unsigned NOT NULL default '0',
+  \`max_width\` int(10) DEFAULT 0,
+  \`max_height\` int(10)  DEFAULT 0,
+  \`max_depth\` int(10)  DEFAULT 0,
+  \`max_weight\` int(10)  DEFAULT 0,
+  \`grade\` int(10)  DEFAULT 0,
+  PRIMARY KEY (\`id_carrier\`),
+  KEY \`deleted\` (\`deleted\`,\`active\`),
+  KEY \`id_tax_rules_group\` (\`id_tax_rules_group\`)
+) ENGINE=ENGINE_TYPE  DEFAULT CHARSET=utf8 1`] = `
+"[37m[1mCREATE[22m[39m [37m[1mTABLE[22m[39m [33m\`PREFIX_carrier\`[39m (
+  [33m\`id_carrier\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mAUTO_INCREMENT[22m[39m[0m,[0m
+  [33m\`id_reference\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`id_tax_rules_group\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mDEFAULT[22m[39m [33m'0'[39m[0m,[0m
+  [33m\`name\`[39m [36mvarchar[39m([32m64[39m) [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`url\`[39m [36mvarchar[39m([32m255[39m) [37m[1mDEFAULT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`active\`[39m [36mtinyint[39m([32m1[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mDEFAULT[22m[39m [33m'0'[39m[0m,[0m
+  [33m\`deleted\`[39m [36mtinyint[39m([32m1[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mDEFAULT[22m[39m [33m'0'[39m[0m,[0m
+  [33m\`shipping_handling\`[39m [36mtinyint[39m([32m1[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mDEFAULT[22m[39m [33m'1'[39m[0m,[0m
+  [33m\`range_behavior\`[39m [36mtinyint[39m([32m1[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mDEFAULT[22m[39m [33m'0'[39m[0m,[0m
+  [33m\`is_module\`[39m [36mtinyint[39m([32m1[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mDEFAULT[22m[39m [33m'0'[39m[0m,[0m
+  [33m\`is_free\`[39m [36mtinyint[39m([32m1[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mDEFAULT[22m[39m [33m'0'[39m[0m,[0m
+  [33m\`shipping_external\`[39m [36mtinyint[39m([32m1[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mDEFAULT[22m[39m [33m'0'[39m[0m,[0m
+  [33m\`need_range\`[39m [36mtinyint[39m([32m1[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mDEFAULT[22m[39m [33m'0'[39m[0m,[0m
+  [33m\`external_module_name\`[39m [36mvarchar[39m([32m64[39m) [37m[1mDEFAULT[22m[39m [36mNULL[39m[0m,[0m
+  [33m\`shipping_method\`[39m [36mint[39m([32m2[39m) [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mDEFAULT[22m[39m [33m'0'[39m[0m,[0m
+  [33m\`position\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mdefault[22m[39m [33m'0'[39m[0m,[0m
+  [33m\`max_width\`[39m [36mint[39m([32m10[39m) [37m[1mDEFAULT[22m[39m [32m0[39m[0m,[0m
+  [33m\`max_height\`[39m [36mint[39m([32m10[39m)  [37m[1mDEFAULT[22m[39m [32m0[39m[0m,[0m
+  [33m\`max_depth\`[39m [36mint[39m([32m10[39m)  [37m[1mDEFAULT[22m[39m [32m0[39m[0m,[0m
+  [33m\`max_weight\`[39m [36mint[39m([32m10[39m)  [37m[1mDEFAULT[22m[39m [32m0[39m[0m,[0m
+  [33m\`grade\`[39m [36mint[39m([32m10[39m)  [37m[1mDEFAULT[22m[39m [32m0[39m[0m,[0m
+  [37m[1mPRIMARY[22m[39m [37m[1mKEY[22m[39m ([33m\`id_carrier\`[39m)[0m,[0m
+  [37m[1mKEY[22m[39m [33m\`deleted\`[39m ([33m\`deleted\`[39m[0m,[0m[33m\`active\`[39m)[0m,[0m
+  [37m[1mKEY[22m[39m [33m\`id_tax_rules_group\`[39m ([33m\`id_tax_rules_group\`[39m)
+) [37m[1mENGINE[22m[39m[0m=[0m[37m[1mENGINE_TYPE[22m[39m  [37m[1mDEFAULT[22m[39m [37m[1mCHARSET[22m[39m[0m=[0mutf8"
+`;
+
+exports[`SqlHighlighter highlights SQL: CREATE TABLE IF NOT EXISTS \`PREFIX_specific_price_rule\` (
+	\`id_specific_price_rule\` int(10) unsigned NOT NULL AUTO_INCREMENT,
+	\`name\` VARCHAR(255) NOT NULL,
+	\`id_shop\` int(11) unsigned NOT NULL DEFAULT '1',
+	\`id_currency\` int(10) unsigned NOT NULL,
+	\`id_country\` int(10) unsigned NOT NULL,
+	\`id_group\` int(10) unsigned NOT NULL,
+	\`from_quantity\` mediumint(8) unsigned NOT NULL,
+	\`price\` DECIMAL(20,6),
+	\`reduction\` decimal(20,6) NOT NULL,
+	\`reduction_type\` enum('amount','percentage') NOT NULL,
+	\`from\` datetime NOT NULL,
+	\`to\` datetime NOT NULL,
+	PRIMARY KEY (\`id_specific_price_rule\`),
+	KEY \`id_product\` (\`id_shop\`,\`id_currency\`,\`id_country\`,\`id_group\`,\`from_quantity\`,\`from\`,\`to\`)
+) ENGINE=ENGINE_TYPE  DEFAULT CHARSET=utf8 1`] = `
+"[37m[1mCREATE[22m[39m [37m[1mTABLE[22m[39m [37m[1mIF[22m[39m [37m[1mNOT[22m[39m [37m[1mEXISTS[22m[39m [33m\`PREFIX_specific_price_rule\`[39m (
+	[33m\`id_specific_price_rule\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mAUTO_INCREMENT[22m[39m[0m,[0m
+	[33m\`name\`[39m [36mVARCHAR[39m([32m255[39m) [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+	[33m\`id_shop\`[39m [36mint[39m([32m11[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m [37m[1mDEFAULT[22m[39m [33m'1'[39m[0m,[0m
+	[33m\`id_currency\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+	[33m\`id_country\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+	[33m\`id_group\`[39m [36mint[39m([32m10[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+	[33m\`from_quantity\`[39m mediumint([32m8[39m) [37m[1munsigned[22m[39m [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+	[33m\`price\`[39m [36mDECIMAL[39m([32m20,6[39m)[0m,[0m
+	[33m\`reduction\`[39m [36mdecimal[39m([32m20,6[39m) [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+	[33m\`reduction_type\`[39m enum([33m'amount'[39m[0m,[0m[33m'percentage'[39m) [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+	[33m\`from\`[39m datetime [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+	[33m\`to\`[39m datetime [37m[1mNOT[22m[39m [36mNULL[39m[0m,[0m
+	[37m[1mPRIMARY[22m[39m [37m[1mKEY[22m[39m ([33m\`id_specific_price_rule\`[39m)[0m,[0m
+	[37m[1mKEY[22m[39m [33m\`id_product\`[39m ([33m\`id_shop\`[39m[0m,[0m[33m\`id_currency\`[39m[0m,[0m[33m\`id_country\`[39m[0m,[0m[33m\`id_group\`[39m[0m,[0m[33m\`from_quantity\`[39m[0m,[0m[33m\`from\`[39m[0m,[0m[33m\`to\`[39m)
+) [37m[1mENGINE[22m[39m[0m=[0m[37m[1mENGINE_TYPE[22m[39m  [37m[1mDEFAULT[22m[39m [37m[1mCHARSET[22m[39m[0m=[0mutf8"
+`;
+
+exports[`SqlHighlighter highlights SQL: CREATE TEMPORARY TABLE \`PREFIX_configuration_tmp\` (
+	\`value\` text
+) 1`] = `
+"[37m[1mCREATE[22m[39m [37m[1mTEMPORARY[22m[39m [37m[1mTABLE[22m[39m [33m\`PREFIX_configuration_tmp\`[39m (
+	[33m\`value\`[39m [36mtext[39m
+)"
+`;
+
+exports[`SqlHighlighter highlights SQL: DROP TABLE \`PREFIX_discount_quantity\` 1`] = `"[37m[1mDROP[22m[39m [37m[1mTABLE[22m[39m [33m\`PREFIX_discount_quantity\`[39m"`;
+
+exports[`SqlHighlighter highlights SQL: DROP TABLE IF EXISTS \`admin_role\` 1`] = `"[37m[1mDROP[22m[39m [37m[1mTABLE[22m[39m [37m[1mIF[22m[39m [37m[1mEXISTS[22m[39m [33m\`admin_role\`[39m"`;
+
+exports[`SqlHighlighter highlights SQL: INSERT INTO \`PREFIX_cms_category_lang\` VALUES(1, 3, 'Inicio', '', 'home', NULL, NULL, NULL) 1`] = `"[37m[1mINSERT[22m[39m [37m[1mINTO[22m[39m [33m\`PREFIX_cms_category_lang\`[39m [37m[1mVALUES[22m[39m([32m1[39m[0m,[0m [32m3[39m[0m,[0m [33m'Inicio'[39m[0m,[0m [33m''[39m[0m,[0m [33m'home'[39m[0m,[0m [36mNULL[39m[0m,[0m [36mNULL[39m[0m,[0m [36mNULL[39m)"`;
+
+exports[`SqlHighlighter highlights SQL: INSERT INTO \`PREFIX_cms_category\` VALUES(1, 0, 0, 1, NOW(), NOW(),0) 1`] = `"[37m[1mINSERT[22m[39m [37m[1mINTO[22m[39m [33m\`PREFIX_cms_category\`[39m [37m[1mVALUES[22m[39m([32m1[39m[0m,[0m [32m0[39m[0m,[0m [32m0[39m[0m,[0m [32m1[39m[0m,[0m [37m[1mNOW()[22m[39m[0m,[0m [37m[1mNOW()[22m[39m[0m,[0m[32m0[39m)"`;
+
+exports[`SqlHighlighter highlights SQL: INSERT INTO \`PREFIX_configuration\` (\`name\`, \`value\`, \`date_add\`, \`date_upd\`) VALUES
+('PS_SPECIFIC_PRICE_PRIORITIES', 'id_shop;id_currency;id_country;id_group', NOW(), NOW()),
+('PS_TAX_DISPLAY', 0, NOW(), NOW()),
+('PS_SMARTY_FORCE_COMPILE', 1, NOW(), NOW()),
+('PS_DISTANCE_UNIT', 'km', NOW(), NOW()),
+('PS_STORES_DISPLAY_CMS', 0, NOW(), NOW()),
+('PS_STORES_DISPLAY_FOOTER', 0, NOW(), NOW()),
+('PS_STORES_SIMPLIFIED', 0, NOW(), NOW()),
+('PS_STATSDATA_CUSTOMER_PAGESVIEWS', 1, NOW(), NOW()),
+('PS_STATSDATA_PAGESVIEWS', 1, NOW(), NOW()),
+('PS_STATSDATA_PLUGINS', 1, NOW(), NOW()) 1`] = `
+"[37m[1mINSERT[22m[39m [37m[1mINTO[22m[39m [33m\`PREFIX_configuration\`[39m ([33m\`name\`[39m[0m,[0m [33m\`value\`[39m[0m,[0m [33m\`date_add\`[39m[0m,[0m [33m\`date_upd\`[39m) [37m[1mVALUES[22m[39m
+([33m'PS_SPECIFIC_PRICE_PRIORITIES'[39m[0m,[0m [33m'id_shop;id_currency;id_country;id_group'[39m[0m,[0m [37m[1mNOW()[22m[39m[0m,[0m [37m[1mNOW()[22m[39m)[0m,[0m
+([33m'PS_TAX_DISPLAY'[39m[0m,[0m [32m0[39m[0m,[0m [37m[1mNOW()[22m[39m[0m,[0m [37m[1mNOW()[22m[39m)[0m,[0m
+([33m'PS_SMARTY_FORCE_COMPILE'[39m[0m,[0m [32m1[39m[0m,[0m [37m[1mNOW()[22m[39m[0m,[0m [37m[1mNOW()[22m[39m)[0m,[0m
+([33m'PS_DISTANCE_UNIT'[39m[0m,[0m [33m'km'[39m[0m,[0m [37m[1mNOW()[22m[39m[0m,[0m [37m[1mNOW()[22m[39m)[0m,[0m
+([33m'PS_STORES_DISPLAY_CMS'[39m[0m,[0m [32m0[39m[0m,[0m [37m[1mNOW()[22m[39m[0m,[0m [37m[1mNOW()[22m[39m)[0m,[0m
+([33m'PS_STORES_DISPLAY_FOOTER'[39m[0m,[0m [32m0[39m[0m,[0m [37m[1mNOW()[22m[39m[0m,[0m [37m[1mNOW()[22m[39m)[0m,[0m
+([33m'PS_STORES_SIMPLIFIED'[39m[0m,[0m [32m0[39m[0m,[0m [37m[1mNOW()[22m[39m[0m,[0m [37m[1mNOW()[22m[39m)[0m,[0m
+([33m'PS_STATSDATA_CUSTOMER_PAGESVIEWS'[39m[0m,[0m [32m1[39m[0m,[0m [37m[1mNOW()[22m[39m[0m,[0m [37m[1mNOW()[22m[39m)[0m,[0m
+([33m'PS_STATSDATA_PAGESVIEWS'[39m[0m,[0m [32m1[39m[0m,[0m [37m[1mNOW()[22m[39m[0m,[0m [37m[1mNOW()[22m[39m)[0m,[0m
+([33m'PS_STATSDATA_PLUGINS'[39m[0m,[0m [32m1[39m[0m,[0m [37m[1mNOW()[22m[39m[0m,[0m [37m[1mNOW()[22m[39m)"
+`;
+
+exports[`SqlHighlighter highlights SQL: INSERT INTO \`PREFIX_configuration\` (\`name\`, \`value\`, \`date_add\`, \`date_upd\`) VALUES ('PS_CONDITIONS_CMS_ID', IFNULL((SELECT \`id_cms\` FROM \`PREFIX_cms\` WHERE \`id_cms\` = 3), 0), NOW(), NOW()) 1`] = `"[37m[1mINSERT[22m[39m [37m[1mINTO[22m[39m [33m\`PREFIX_configuration\`[39m ([33m\`name\`[39m[0m,[0m [33m\`value\`[39m[0m,[0m [33m\`date_add\`[39m[0m,[0m [33m\`date_upd\`[39m) [37m[1mVALUES[22m[39m ([33m'PS_CONDITIONS_CMS_ID'[39m[0m,[0m [37m[1mIFNULL[22m[39m(([37m[1mSELECT[22m[39m [33m\`id_cms\`[39m [37m[1mFROM[22m[39m [33m\`PREFIX_cms\`[39m [37m[1mWHERE[22m[39m [33m\`id_cms\`[39m [0m=[0m [32m3[39m)[0m,[0m [32m0[39m)[0m,[0m [37m[1mNOW()[22m[39m[0m,[0m [37m[1mNOW()[22m[39m)"`;
+
+exports[`SqlHighlighter highlights SQL: INSERT INTO \`PREFIX_hook\` (\`name\`, \`title\`, \`description\`, \`position\`) VALUES ('processCarrier', 'Carrier Process', NULL, 0) 1`] = `"[37m[1mINSERT[22m[39m [37m[1mINTO[22m[39m [33m\`PREFIX_hook\`[39m ([33m\`name\`[39m[0m,[0m [33m\`title\`[39m[0m,[0m [33m\`description\`[39m[0m,[0m [33m\`position\`[39m) [37m[1mVALUES[22m[39m ([33m'processCarrier'[39m[0m,[0m [33m'Carrier Process'[39m[0m,[0m [36mNULL[39m[0m,[0m [32m0[39m)"`;
+
+exports[`SqlHighlighter highlights SQL: INSERT INTO \`PREFIX_meta_lang\` (\`id_lang\`, \`id_meta\`, \`title\`, \`url_rewrite\`) VALUES
+(1, (SELECT \`id_meta\` FROM \`PREFIX_meta\` WHERE \`page\` = 'authentication'), 'Authentication', 'authentication'),
+(2, (SELECT \`id_meta\` FROM \`PREFIX_meta\` WHERE \`page\` = 'authentication'), 'Authentification', 'authentification'),
+(3, (SELECT \`id_meta\` FROM \`PREFIX_meta\` WHERE \`page\` = 'authentication'), 'Autenticaciòn', 'autenticacion') 1`] = `
+"[37m[1mINSERT[22m[39m [37m[1mINTO[22m[39m [33m\`PREFIX_meta_lang\`[39m ([33m\`id_lang\`[39m[0m,[0m [33m\`id_meta\`[39m[0m,[0m [33m\`title\`[39m[0m,[0m [33m\`url_rewrite\`[39m) [37m[1mVALUES[22m[39m
+([32m1[39m[0m,[0m ([37m[1mSELECT[22m[39m [33m\`id_meta\`[39m [37m[1mFROM[22m[39m [33m\`PREFIX_meta\`[39m [37m[1mWHERE[22m[39m [33m\`page\`[39m [0m=[0m [33m'authentication'[39m)[0m,[0m [33m'Authentication'[39m[0m,[0m [33m'authentication'[39m)[0m,[0m
+([32m2[39m[0m,[0m ([37m[1mSELECT[22m[39m [33m\`id_meta\`[39m [37m[1mFROM[22m[39m [33m\`PREFIX_meta\`[39m [37m[1mWHERE[22m[39m [33m\`page\`[39m [0m=[0m [33m'authentication'[39m)[0m,[0m [33m'Authentification'[39m[0m,[0m [33m'authentification'[39m)[0m,[0m
+([32m3[39m[0m,[0m ([37m[1mSELECT[22m[39m [33m\`id_meta\`[39m [37m[1mFROM[22m[39m [33m\`PREFIX_meta\`[39m [37m[1mWHERE[22m[39m [33m\`page\`[39m [0m=[0m [33m'authentication'[39m)[0m,[0m [33m'Autenticaciòn'[39m[0m,[0m [33m'autenticacion'[39m)"
+`;
+
+exports[`SqlHighlighter highlights SQL: INSERT INTO \`PREFIX_specific_price\` (\`id_product\`, \`id_shop\`, \`id_currency\`, \`id_country\`, \`id_group\`, \`priority\`, \`price\`, \`from_quantity\`, \`reduction\`, \`reduction_type\`, \`from\`, \`to\`)
+	(	SELECT dq.\`id_product\`, 1, 1, 0, 1, 0, 0.00, dq.\`quantity\`, IF(dq.\`id_discount_type\` = 2, dq.\`value\`, dq.\`value\` / 100), IF (dq.\`id_discount_type\` = 2, 'amount', 'percentage'), '0000-00-00 00:00:00', '0000-00-00 00:00:00'
+		FROM \`PREFIX_discount_quantity\` dq
+		INNER JOIN \`PREFIX_product\` p ON (p.\`id_product\` = dq.\`id_product\`)
+	) 1`] = `
+"[37m[1mINSERT[22m[39m [37m[1mINTO[22m[39m [33m\`PREFIX_specific_price\`[39m ([33m\`id_product\`[39m[0m,[0m [33m\`id_shop\`[39m[0m,[0m [33m\`id_currency\`[39m[0m,[0m [33m\`id_country\`[39m[0m,[0m [33m\`id_group\`[39m[0m,[0m [33m\`priority\`[39m[0m,[0m [33m\`price\`[39m[0m,[0m [33m\`from_quantity\`[39m[0m,[0m [33m\`reduction\`[39m[0m,[0m [33m\`reduction_type\`[39m[0m,[0m [33m\`from\`[39m[0m,[0m [33m\`to\`[39m)
+	(	[37m[1mSELECT[22m[39m dq[0m.[0m[33m\`id_product\`[39m[0m,[0m [32m1[39m[0m,[0m [32m1[39m[0m,[0m [32m0[39m[0m,[0m [32m1[39m[0m,[0m [32m0[39m[0m,[0m [32m0.00[39m[0m,[0m dq[0m.[0m[33m\`quantity\`[39m[0m,[0m [37m[1mIF[22m[39m(dq[0m.[0m[33m\`id_discount_type\`[39m [0m=[0m [32m2[39m[0m,[0m dq[0m.[0m[33m\`value\`[39m[0m,[0m dq[0m.[0m[33m\`value\`[39m [0m/[0m [32m100[39m)[0m,[0m [37m[1mIF[22m[39m (dq[0m.[0m[33m\`id_discount_type\`[39m [0m=[0m [32m2[39m[0m,[0m [33m'amount'[39m[0m,[0m [33m'percentage'[39m)[0m,[0m [33m'0000-00-00 00:00:00'[39m[0m,[0m [33m'0000-00-00 00:00:00'[39m
+		[37m[1mFROM[22m[39m [33m\`PREFIX_discount_quantity\`[39m dq
+		[37m[1mINNER JOIN[22m[39m [33m\`PREFIX_product\`[39m p [37m[1mON[22m[39m (p[0m.[0m[33m\`id_product\`[39m [0m=[0m dq[0m.[0m[33m\`id_product\`[39m)
+	)"
+`;
+
+exports[`SqlHighlighter highlights SQL: INSERT INTO \`PREFIX_specific_price\` (\`id_product\`, \`id_shop\`, \`id_currency\`, \`id_country\`, \`id_group\`, \`priority\`, \`price\`, \`from_quantity\`, \`reduction\`, \`reduction_type\`, \`from\`, \`to\`) (
+	SELECT
+		p.\`id_product\`,
+		1,
+		0,
+		0,
+		0,
+		0,
+		0.00,
+		1,
+		IF(p.\`reduction_price\` > 0, p.\`reduction_price\`, p.\`reduction_percent\` / 100),
+		IF(p.\`reduction_price\` > 0, 'amount', 'percentage'),
+		IF (p.\`reduction_from\` = p.\`reduction_to\`, '0000-00-00 00:00:00', p.\`reduction_from\`),
+		IF (p.\`reduction_from\` = p.\`reduction_to\`, '0000-00-00 00:00:00', p.\`reduction_to\`)
+	FROM \`PREFIX_product\` p
+	WHERE p.\`reduction_price\` OR p.\`reduction_percent\`
+) 1`] = `
+"[37m[1mINSERT[22m[39m [37m[1mINTO[22m[39m [33m\`PREFIX_specific_price\`[39m ([33m\`id_product\`[39m[0m,[0m [33m\`id_shop\`[39m[0m,[0m [33m\`id_currency\`[39m[0m,[0m [33m\`id_country\`[39m[0m,[0m [33m\`id_group\`[39m[0m,[0m [33m\`priority\`[39m[0m,[0m [33m\`price\`[39m[0m,[0m [33m\`from_quantity\`[39m[0m,[0m [33m\`reduction\`[39m[0m,[0m [33m\`reduction_type\`[39m[0m,[0m [33m\`from\`[39m[0m,[0m [33m\`to\`[39m) (
+	[37m[1mSELECT[22m[39m
+		p[0m.[0m[33m\`id_product\`[39m[0m,[0m
+		[32m1[39m[0m,[0m
+		[32m0[39m[0m,[0m
+		[32m0[39m[0m,[0m
+		[32m0[39m[0m,[0m
+		[32m0[39m[0m,[0m
+		[32m0.00[39m[0m,[0m
+		[32m1[39m[0m,[0m
+		[37m[1mIF[22m[39m(p[0m.[0m[33m\`reduction_price\`[39m [0m>[0m [32m0[39m[0m,[0m p[0m.[0m[33m\`reduction_price\`[39m[0m,[0m p[0m.[0m[33m\`reduction_percent\`[39m [0m/[0m [32m100[39m)[0m,[0m
+		[37m[1mIF[22m[39m(p[0m.[0m[33m\`reduction_price\`[39m [0m>[0m [32m0[39m[0m,[0m [33m'amount'[39m[0m,[0m [33m'percentage'[39m)[0m,[0m
+		[37m[1mIF[22m[39m (p[0m.[0m[33m\`reduction_from\`[39m [0m=[0m p[0m.[0m[33m\`reduction_to\`[39m[0m,[0m [33m'0000-00-00 00:00:00'[39m[0m,[0m p[0m.[0m[33m\`reduction_from\`[39m)[0m,[0m
+		[37m[1mIF[22m[39m (p[0m.[0m[33m\`reduction_from\`[39m [0m=[0m p[0m.[0m[33m\`reduction_to\`[39m[0m,[0m [33m'0000-00-00 00:00:00'[39m[0m,[0m p[0m.[0m[33m\`reduction_to\`[39m)
+	[37m[1mFROM[22m[39m [33m\`PREFIX_product\`[39m p
+	[37m[1mWHERE[22m[39m p[0m.[0m[33m\`reduction_price\`[39m [37m[1mOR[22m[39m p[0m.[0m[33m\`reduction_percent\`[39m
+)"
+`;
+
+exports[`SqlHighlighter highlights SQL: INSERT INTO \`PREFIX_stock_mvt_reason_lang\` (\`id_stock_mvt_reason\`, \`id_lang\`, \`name\`) VALUES
+(1, 1, 'Order'),
+(1, 2, 'Commande'),
+(2, 1, 'Missing Stock Movement'),
+(2, 2, 'Mouvement de stock manquant'),
+(3, 1, 'Restocking'),
+(3, 2, 'Rèassort') 1`] = `
+"[37m[1mINSERT[22m[39m [37m[1mINTO[22m[39m [33m\`PREFIX_stock_mvt_reason_lang\`[39m ([33m\`id_stock_mvt_reason\`[39m[0m,[0m [33m\`id_lang\`[39m[0m,[0m [33m\`name\`[39m) [37m[1mVALUES[22m[39m
+([32m1[39m[0m,[0m [32m1[39m[0m,[0m [33m'Order'[39m)[0m,[0m
+([32m1[39m[0m,[0m [32m2[39m[0m,[0m [33m'Commande'[39m)[0m,[0m
+([32m2[39m[0m,[0m [32m1[39m[0m,[0m [33m'Missing Stock Movement'[39m)[0m,[0m
+([32m2[39m[0m,[0m [32m2[39m[0m,[0m [33m'Mouvement de stock manquant'[39m)[0m,[0m
+([32m3[39m[0m,[0m [32m1[39m[0m,[0m [33m'Restocking'[39m)[0m,[0m
+([32m3[39m[0m,[0m [32m2[39m[0m,[0m [33m'Rèassort'[39m)"
+`;
+
+exports[`SqlHighlighter highlights SQL: LOCK TABLES \`admin_assert\` WRITE 1`] = `"[37m[1mLOCK[22m[39m [37m[1mTABLES[22m[39m [33m\`admin_assert\`[39m [37m[1mWRITE[22m[39m"`;
+
+exports[`SqlHighlighter highlights SQL: SELECT "no closing quote 1`] = `"[37m[1mSELECT[22m[39m [33m\\"no closing quote[39m"`;
+
+exports[`SqlHighlighter highlights SQL: SELECT * FROM
+-- This is another comment
+MyTable # One final comment
+
+/* This is a block comment
+*/ WHERE 1 = 2; 1`] = `
+"[37m[1mSELECT[22m[39m [0m*[0m [37m[1mFROM[22m[39m
+[32m[2m-- This is another comment[22m[39m
+MyTable [32m[2m# One final comment[22m[39m
+
+[32m[2m/* This is a block comment[22m[39m
+[32m[2m*/[22m[39m [37m[1mWHERE[22m[39m [32m1[39m [0m=[0m [32m2[39m[0m;[0m"
+`;
+
+exports[`SqlHighlighter highlights SQL: SELECT * FROM sometable
+UNION ALL
+SELECT * FROM someothertable; 1`] = `
+"[37m[1mSELECT[22m[39m [0m*[0m [37m[1mFROM[22m[39m sometable
+[37m[1mUNION ALL[22m[39m
+[37m[1mSELECT[22m[39m [0m*[0m [37m[1mFROM[22m[39m someothertable[0m;[0m"
+`;
+
+exports[`SqlHighlighter highlights SQL: SELECT * LIMIT 1; SELECT a,b,c,d FROM e LIMIT 1, 2; SELECT 1,2,3 WHERE a in (1,2,3,4,5) and b=5; 1`] = `"[37m[1mSELECT[22m[39m [0m*[0m [37m[1mLIMIT[22m[39m [32m1[39m[0m;[0m [37m[1mSELECT[22m[39m a[0m,[0mb[0m,[0mc[0m,[0md [37m[1mFROM[22m[39m e [37m[1mLIMIT[22m[39m [32m1[39m[0m,[0m [32m2[39m[0m;[0m [37m[1mSELECT[22m[39m [32m1,2[39m[0m,[0m[32m3[39m [37m[1mWHERE[22m[39m a [37m[1min[22m[39m ([32m1,2[39m[0m,[0m[32m3,4[39m[0m,[0m[32m5[39m) [37m[1mand[22m[39m b[0m=[0m[32m5[39m[0m;[0m"`;
+
+exports[`SqlHighlighter highlights SQL: SELECT :pdoParam; 1`] = `"[37m[1mSELECT[22m[39m [33m:pdoParam[39m[0m;[0m"`;
+
+exports[`SqlHighlighter highlights SQL: SELECT @ and b; 1`] = `"[37m[1mSELECT[22m[39m @ [37m[1mand[22m[39m b[0m;[0m"`;
+
+exports[`SqlHighlighter highlights SQL: SELECT @"weird variable name"; 1`] = `"[37m[1mSELECT[22m[39m [33m@\\"weird variable name\\"[39m[0m;[0m"`;
+
+exports[`SqlHighlighter highlights SQL: SELECT [sqlserver] FROM [escap[e]]d style]; 1`] = `"[37m[1mSELECT[22m[39m [33m[sqlserver][39m [37m[1mFROM[22m[39m [33m[escap[e]]d style][39m[0m;[0m"`;
+
+exports[`SqlHighlighter highlights SQL: SELECT -- This is a test 1`] = `"[37m[1mSELECT[22m[39m [32m[2m-- This is a test[22m[39m"`;
+
+exports[`SqlHighlighter highlights SQL: SELECT Test FROM Test WHERE
+(
+ MyColumn = 1 )) AND ((( SomeOtherColumn = 2); 1`] = `
+"[37m[1mSELECT[22m[39m Test [37m[1mFROM[22m[39m Test [37m[1mWHERE[22m[39m
+(
+ MyColumn [0m=[0m [32m1[39m )) [37m[1mAND[22m[39m ((( SomeOtherColumn [0m=[0m [32m2[39m)[0m;[0m"
+`;
+
+exports[`SqlHighlighter highlights SQL: SELECT a FROM b LEFT
+OUTER
+JOIN c on (d=f); 1`] = `
+"[37m[1mSELECT[22m[39m a [37m[1mFROM[22m[39m b [37m[1mLEFT[22m[39m
+[37m[1mOUTER[22m[39m
+[37m[1mJOIN[22m[39m c [37m[1mon[22m[39m (d[0m=[0mf)[0m;[0m"
+`;
+
+exports[`SqlHighlighter highlights SQL: SELECT count - 50
+WHERE a-50 = b
+WHERE 1 and - 50
+WHERE -50 = a
+WHERE a = -50
+WHERE 1 /*test*/ - 50
+WHERE 1 and -50; 1`] = `
+"[37m[1mSELECT[22m[39m count [0m-[0m [32m50[39m
+[37m[1mWHERE[22m[39m a[0m-[0m[32m50[39m [0m=[0m b
+[37m[1mWHERE[22m[39m [32m1[39m [37m[1mand[22m[39m [0m-[0m [32m50[39m
+[37m[1mWHERE[22m[39m [0m-[0m[32m50[39m [0m=[0m a
+[37m[1mWHERE[22m[39m a [0m=[0m [0m-[0m[32m50[39m
+[37m[1mWHERE[22m[39m [32m1[39m [32m[2m/*test*/[22m[39m [0m-[0m [32m50[39m
+[37m[1mWHERE[22m[39m [32m1[39m [37m[1mand[22m[39m [0m-[0m[32m50[39m[0m;[0m"
+`;
+
+exports[`SqlHighlighter highlights SQL: SELECT customer_id, customer_name, COUNT(order_id) as total
+FROM customers INNER JOIN orders ON customers.customer_id = orders.customer_id
+GROUP BY customer_id, customer_name
+HAVING COUNT(order_id) > 5
+ORDER BY COUNT(order_id) DESC; 1`] = `
+"[37m[1mSELECT[22m[39m customer_id[0m,[0m customer_name[0m,[0m [37m[1mCOUNT[22m[39m(order_id) [37m[1mas[22m[39m total
+[37m[1mFROM[22m[39m customers [37m[1mINNER JOIN[22m[39m orders [37m[1mON[22m[39m customers[0m.[0mcustomer_id [0m=[0m orders[0m.[0mcustomer_id
+[37m[1mGROUP BY[22m[39m customer_id[0m,[0m customer_name
+[37m[1mHAVING[22m[39m [37m[1mCOUNT[22m[39m(order_id) [0m>[0m [32m5[39m
+[37m[1mORDER BY[22m[39m [37m[1mCOUNT[22m[39m(order_id) [37m[1mDESC[22m[39m[0m;[0m"
+`;
+
+exports[`SqlHighlighter highlights SQL: SET @defaultOOS = (SELECT value FROM \`PREFIX_configuration\` WHERE name = 'PS_ORDER_OUT_OF_STOCK') 1`] = `"[37m[1mSET[22m[39m [33m@defaultOOS[39m [0m=[0m ([37m[1mSELECT[22m[39m value [37m[1mFROM[22m[39m [33m\`PREFIX_configuration\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'PS_ORDER_OUT_OF_STOCK'[39m)"`;
+
+exports[`SqlHighlighter highlights SQL: SET NAMES 'utf8'; 1`] = `"[37m[1mSET[22m[39m [37m[1mNAMES[22m[39m [33m'utf8'[39m[0m;[0m"`;
+
+exports[`SqlHighlighter highlights SQL: UNLOCK TABLES 1`] = `"[37m[1mUNLOCK[22m[39m [37m[1mTABLES[22m[39m"`;
+
+exports[`SqlHighlighter highlights SQL: UPDATE \`PREFIX_cms_category\` SET \`position\` = 0 1`] = `"[37m[1mUPDATE[22m[39m [33m\`PREFIX_cms_category\`[39m [37m[1mSET[22m[39m [33m\`position\`[39m [0m=[0m [32m0[39m"`;
+
+exports[`SqlHighlighter highlights SQL: UPDATE \`PREFIX_configuration\` SET value = '6' WHERE name = 'PS_SEARCH_WEIGHT_PNAME' 1`] = `"[37m[1mUPDATE[22m[39m [33m\`PREFIX_configuration\`[39m [37m[1mSET[22m[39m value [0m=[0m [33m'6'[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'PS_SEARCH_WEIGHT_PNAME'[39m"`;
+
+exports[`SqlHighlighter highlights SQL: UPDATE \`PREFIX_hook_module\` SET position = 1
+WHERE
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'displayPayment') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'cheque')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'displayPaymentReturn') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'cheque')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'displayHome') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'homeslider')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'actionAuthentication') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'statsdata')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'actionShopDataDuplication') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'homeslider')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'displayTop') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'blocklanguages')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'actionCustomerAccountAdd') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'statsdata')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'displayCustomerAccount') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'favoriteproducts')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'displayAdminStatsModules') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'statsvisits')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'displayAdminStatsGraphEngine') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'graphvisifire')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'displayAdminStatsGridEngine') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'gridhtml')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'displayLeftColumnProduct') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'blocksharefb')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'actionSearch') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'statssearch')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'actionCategoryAdd') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'blockcategories')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'actionCategoryUpdate') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'blockcategories')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'actionCategoryDelete') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'blockcategories')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'actionAdminMetaSave') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'blockcategories')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'displayMyAccountBlock') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'favoriteproducts')
+	OR
+	id_hook = (SELECT id_hook FROM \`PREFIX_hook\` WHERE name = 'displayFooter') AND id_module = (SELECT id_module FROM \`PREFIX_module\` WHERE name = 'blockreinsurance') 1`] = `
+"[37m[1mUPDATE[22m[39m [33m\`PREFIX_hook_module\`[39m [37m[1mSET[22m[39m position [0m=[0m [32m1[39m
+[37m[1mWHERE[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'displayPayment'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'cheque'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'displayPaymentReturn'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'cheque'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'displayHome'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'homeslider'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'actionAuthentication'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'statsdata'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'actionShopDataDuplication'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'homeslider'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'displayTop'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'blocklanguages'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'actionCustomerAccountAdd'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'statsdata'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'displayCustomerAccount'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'favoriteproducts'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'displayAdminStatsModules'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'statsvisits'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'displayAdminStatsGraphEngine'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'graphvisifire'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'displayAdminStatsGridEngine'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'gridhtml'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'displayLeftColumnProduct'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'blocksharefb'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'actionSearch'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'statssearch'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'actionCategoryAdd'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'blockcategories'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'actionCategoryUpdate'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'blockcategories'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'actionCategoryDelete'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'blockcategories'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'actionAdminMetaSave'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'blockcategories'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'displayMyAccountBlock'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'favoriteproducts'[39m)
+	[37m[1mOR[22m[39m
+	id_hook [0m=[0m ([37m[1mSELECT[22m[39m id_hook [37m[1mFROM[22m[39m [33m\`PREFIX_hook\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'displayFooter'[39m) [37m[1mAND[22m[39m id_module [0m=[0m ([37m[1mSELECT[22m[39m id_module [37m[1mFROM[22m[39m [33m\`PREFIX_module\`[39m [37m[1mWHERE[22m[39m name [0m=[0m [33m'blockreinsurance'[39m)"
+`;
+
+exports[`SqlHighlighter highlights SQL: UPDATE \`PREFIX_product\` p SET \`cache_default_attribute\` =  0 WHERE \`id_product\` NOT IN (SELECT \`id_product\` FROM \`PREFIX_product_attribute\`) 1`] = `"[37m[1mUPDATE[22m[39m [33m\`PREFIX_product\`[39m p [37m[1mSET[22m[39m [33m\`cache_default_attribute\`[39m [0m=[0m  [32m0[39m [37m[1mWHERE[22m[39m [33m\`id_product\`[39m [37m[1mNOT[22m[39m [37m[1mIN[22m[39m ([37m[1mSELECT[22m[39m [33m\`id_product\`[39m [37m[1mFROM[22m[39m [33m\`PREFIX_product_attribute\`[39m)"`;
+
+exports[`SqlHighlighter highlights SQL: UPDATE customers
+        SET totalorders = ordersummary.total
+        FROM (SELECT customer_id, count(order_id) As total
+FROM orders GROUP BY customer_id) As ordersummary
+        WHERE customers.customer_id = ordersummary.customer_id 1`] = `
+"[37m[1mUPDATE[22m[39m customers
+        [37m[1mSET[22m[39m totalorders [0m=[0m ordersummary[0m.[0mtotal
+        [37m[1mFROM[22m[39m ([37m[1mSELECT[22m[39m customer_id[0m,[0m [37m[1mcount[22m[39m(order_id) [37m[1mAs[22m[39m total
+[37m[1mFROM[22m[39m orders [37m[1mGROUP BY[22m[39m customer_id) [37m[1mAs[22m[39m ordersummary
+        [37m[1mWHERE[22m[39m customers[0m.[0mcustomer_id [0m=[0m ordersummary[0m.[0mcustomer_id"
+`;

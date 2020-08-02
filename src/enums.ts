@@ -1,0 +1,47 @@
+export enum TokenType {
+  WHITESPACE,
+  WORD,
+  QUOTE,
+  BACKTICK_QUOTE,
+  RESERVED,
+  RESERVED_TOPLEVEL,
+  RESERVED_NEWLINE,
+  BOUNDARY,
+  COMMENT,
+  BLOCK_COMMENT,
+  NUMBER,
+  ERROR,
+  VARIABLE,
+  LITERAL,
+  BUILT_IN,
+}
+
+export enum HighlightSubject {
+  BOUNDARY = 'boundary',
+  WORD = 'word',
+  BACKTICK_QUOTE = 'backtickQuote',
+  QUOTE = 'quote',
+  RESERVED = 'reserved',
+  NUMBER = 'number',
+  VARIABLE = 'variable',
+  COMMENT = 'comment',
+  FUNCTIONS = 'functions',
+  LITERAL = 'literal',
+  BUILT_IN = 'builtIn',
+}
+
+export const TOKEN_TYPE_TO_HIGHLIGHT = {
+  [TokenType.BOUNDARY]: HighlightSubject.BOUNDARY,
+  [TokenType.WORD]: HighlightSubject.WORD,
+  [TokenType.BACKTICK_QUOTE]: HighlightSubject.BACKTICK_QUOTE,
+  [TokenType.QUOTE]: HighlightSubject.QUOTE,
+  [TokenType.RESERVED]: HighlightSubject.RESERVED,
+  [TokenType.RESERVED_TOPLEVEL]: HighlightSubject.RESERVED,
+  [TokenType.RESERVED_NEWLINE]: HighlightSubject.RESERVED,
+  [TokenType.NUMBER]: HighlightSubject.NUMBER,
+  [TokenType.VARIABLE]: HighlightSubject.VARIABLE,
+  [TokenType.COMMENT]: HighlightSubject.COMMENT,
+  [TokenType.BLOCK_COMMENT]: HighlightSubject.COMMENT,
+  [TokenType.LITERAL]: HighlightSubject.LITERAL,
+  [TokenType.BUILT_IN]: HighlightSubject.BUILT_IN,
+};
