@@ -28,9 +28,11 @@ export enum HighlightSubject {
   FUNCTIONS = 'functions',
   LITERAL = 'literal',
   BUILT_IN = 'builtIn',
+  WHITESPACE = 'whitespace',
+  ERROR = 'error',
 }
 
-export const TOKEN_TYPE_TO_HIGHLIGHT = {
+export const TOKEN_TYPE_TO_HIGHLIGHT: Record<TokenType, HighlightSubject | undefined> = {
   [TokenType.BOUNDARY]: HighlightSubject.BOUNDARY,
   [TokenType.WORD]: HighlightSubject.WORD,
   [TokenType.BACKTICK_QUOTE]: HighlightSubject.BACKTICK_QUOTE,
@@ -44,4 +46,6 @@ export const TOKEN_TYPE_TO_HIGHLIGHT = {
   [TokenType.BLOCK_COMMENT]: HighlightSubject.COMMENT,
   [TokenType.LITERAL]: HighlightSubject.LITERAL,
   [TokenType.BUILT_IN]: HighlightSubject.BUILT_IN,
+  [TokenType.WHITESPACE]: HighlightSubject.WHITESPACE,
+  [TokenType.ERROR]: HighlightSubject.ERROR,
 };
