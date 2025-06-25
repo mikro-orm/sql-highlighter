@@ -2,9 +2,11 @@ import c from 'ansi-colors';
 import { Token, Tokenizer } from './Tokenizer';
 import { TokenType, HighlightSubject, TOKEN_TYPE_TO_HIGHLIGHT } from './enums';
 
+type Theme = { [key in HighlightSubject]?: c.StyleFunction };
+
 export class SqlHighlighter {
 
-  static readonly DEFAULT_THEME = {
+  static readonly DEFAULT_THEME: Theme = {
     [HighlightSubject.QUOTE]: c.yellow,
     [HighlightSubject.BACKTICK_QUOTE]: c.yellow,
     [HighlightSubject.RESERVED]: c.white.bold,
@@ -16,11 +18,13 @@ export class SqlHighlighter {
     [HighlightSubject.FUNCTIONS]: c.green.bold,
     [HighlightSubject.BUILT_IN]: c.cyan,
     [HighlightSubject.LITERAL]: c.cyan,
+    [HighlightSubject.WHITESPACE]: undefined,
+    [HighlightSubject.ERROR]: undefined,
   };
 
   private readonly tokenizer = new Tokenizer();
 
-  constructor(private readonly theme: { [K in keyof typeof HighlightSubject]?: string } = {}) {
+  constructor(private readonly theme: Theme = {}) {
     this.theme = { ...SqlHighlighter.DEFAULT_THEME, ...this.theme };
   }
 
@@ -50,11 +54,15 @@ export class SqlHighlighter {
   }
 
   private colorize(type: TokenType, value: string): string {
-    if (!TOKEN_TYPE_TO_HIGHLIGHT[type] || !this.theme[TOKEN_TYPE_TO_HIGHLIGHT[type]]) {
+    const subject = TOKEN_TYPE_TO_HIGHLIGHT[type];
+    if (!subject) {
       return value;
     }
-
-    return this.theme[TOKEN_TYPE_TO_HIGHLIGHT[type]](value);
+    const fct = this.theme[subject];
+    if (!fct) {
+      return value;
+    }
+    return fct(value);
   }
 
 }
