@@ -31,8 +31,8 @@ jobs:
     - name: Test
       run: yarn test
 
-    - name: Coveralls
+    - name: Codecov
       if: matrix.node-version == 24
-      uses: coverallsapp/github-action@v2
+      uses: codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f # v7.0.0
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.CODECOV_TOKEN }}
