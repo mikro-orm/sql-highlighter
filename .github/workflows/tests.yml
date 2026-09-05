@@ -7,22 +7,20 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 13.x, 14.x]
+        node-version: [22, 24, 26]
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@v7
       with:
         node-version: ${{ matrix.node-version }}
 
     - name: EditorConfig Lint
-      uses: docker://mstruebing/editorconfig-checker:2.7.2
+      uses: docker://mstruebing/editorconfig-checker:4.0.1
 
     - name: Install
-      run: |
-        yarn config set ignore-engines true
-        yarn
+      run: yarn
 
     - name: Build
       run: yarn build
@@ -31,11 +29,10 @@ jobs:
       run: yarn lint
 
     - name: Test
-      run: |
-        yarn test > COVERAGE_RESULT
-        echo "$(cat COVERAGE_RESULT)"
+      run: yarn test
 
     - name: Coveralls
-      uses: coverallsapp/github-action@master
+      if: matrix.node-version == 24
+      uses: coverallsapp/github-action@v2
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
