@@ -1,0 +1,56 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/npm/oxlint/configuration_schema.json",
+  "ignorePatterns": [
+    "**/node_modules",
+    "**/dist",
+    "**/coverage",
+    "**/*.js",
+    "**/*.d.ts"
+  ],
+  "plugins": [
+    "typescript",
+    "vitest"
+  ],
+  "env": {
+    "node": true
+  },
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error"
+  },
+  "rules": {
+    "no-var": "error",
+    "prefer-const": "error",
+    "prefer-rest-params": "error",
+    "prefer-spread": "error",
+    "eqeqeq": "error",
+    "curly": "error",
+    "no-console": "error",
+    "no-else-return": "error",
+    "dot-notation": "error",
+    "object-shorthand": "error",
+    "no-throw-literal": "error",
+    "yoda": "error",
+    "typescript/no-explicit-any": "off",
+    "typescript/no-non-null-assertion": "off",
+    "typescript/ban-ts-comment": "off",
+    "typescript/no-unused-vars": "off",
+    "typescript/array-type": "error",
+    "typescript/consistent-type-assertions": "error",
+    "typescript/no-inferrable-types": "error",
+    "typescript/no-namespace": "error",
+    "typescript/no-this-alias": "error",
+    "typescript/prefer-optional-chain": "error",
+    "typescript/no-useless-constructor": "error"
+  },
+  "globals": {
+    "describe": "readonly",
+    "test": "readonly",
+    "expect": "readonly",
+    "beforeAll": "readonly",
+    "afterAll": "readonly",
+    "beforeEach": "readonly",
+    "afterEach": "readonly",
+    "vi": "readonly"
+  }
+}
