@@ -9,11 +9,10 @@
   ],
   "plugins": [
     "typescript",
-    "jest"
+    "vitest"
   ],
   "env": {
-    "node": true,
-    "jest": true
+    "node": true
   },
   "categories": {
     "correctness": "error",
@@ -43,5 +42,15 @@
     "typescript/no-this-alias": "error",
     "typescript/prefer-optional-chain": "error",
     "typescript/no-useless-constructor": "error"
+  },
+  "globals": {
+    "describe": "readonly",
+    "test": "readonly",
+    "expect": "readonly",
+    "beforeAll": "readonly",
+    "afterAll": "readonly",
+    "beforeEach": "readonly",
+    "afterEach": "readonly",
+    "vi": "readonly"
   }
 }

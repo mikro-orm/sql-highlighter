@@ -29,33 +29,19 @@
     "compile": "tsc -p tsconfig.json",
     "copy": "node ./scripts/copy.js",
     "lint": "oxlint src tests",
-    "test": "jest"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.ts$": "@swc/jest"
-    },
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "<rootDir>/src/**/*.ts"
-    ],
-    "modulePathIgnorePatterns": [
-      "dist/package.json",
-      "<rootDir>/package.json"
-    ]
+    "test": "vitest run"
   },
   "dependencies": {
     "ansi-colors": "^4.1.1"
   },
   "devDependencies": {
-    "@swc/core": "^1.16.2",
-    "@swc/jest": "^0.2.39",
-    "@types/jest": "^30.0.0",
     "@types/node": "^24.0.0",
-    "jest": "^30.5.1",
+    "@vitest/coverage-v8": "^5.0.0",
     "oxlint": "^1.81.0",
     "rimraf": "^6.1.3",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2",
+    "vitest": "^5.0.0"
   },
   "packageManager": "yarn@1.22.22"
 }
